@@ -47,7 +47,8 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: UITextFieldDelegate {
+// MARK: - Alert Control
+extension LoginViewController {
     
     func viewAlert (title: String, message: String, tag: Int) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -62,6 +63,10 @@ extension LoginViewController: UITextFieldDelegate {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+ }
+
+// MARK: - Key Return Control
+extension LoginViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -73,7 +78,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTF.becomeFirstResponder()
         } else {
             loginButtonPressed()
-          //  performSegue(withIdentifier: "goToWelcomeVC", sender: nil)
+            //  performSegue(withIdentifier: "goToWelcomeVC", sender: nil)
         }
         return true
     }
