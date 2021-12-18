@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         
     // MARK: IB Action
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed() {
         guard userNameTF.text == userName, passwordTF.text == password  else {
             passwordTF.text = ""
             viewAlert(title: "Error", message: "Incorrect password or name of user", tag: 0)
@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController {
+extension LoginViewController: UITextFieldDelegate {
     
     func viewAlert (title: String, message: String, tag: Int) {
         let alert =  UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -66,6 +66,16 @@ extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            loginButtonPressed()
+          //  performSegue(withIdentifier: "goToWelcomeVC", sender: nil)
+        }
+        return true
     }
 }
 
