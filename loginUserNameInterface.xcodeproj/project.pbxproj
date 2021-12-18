@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CA58E8B2276C9FC800104FF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */; };
 		CA58E8B4276C9FC800104FF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */; };
-		CA58E8B6276C9FC800104FF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B5276C9FC800104FF1 /* ViewController.swift */; };
+		CA58E8B6276C9FC800104FF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */; };
 		CA58E8B9276C9FC800104FF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA58E8B7276C9FC800104FF1 /* Main.storyboard */; };
 		CA58E8BB276C9FD600104FF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA58E8BA276C9FD600104FF1 /* Assets.xcassets */; };
 		CA58E8BE276C9FD600104FF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA58E8BC276C9FD600104FF1 /* LaunchScreen.storyboard */; };
+		CA58E8C8276CADFC00104FF1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA58E8AE276C9FC800104FF1 /* loginUserNameInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginUserNameInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA58E8B5276C9FC800104FF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA58E8B8276C9FC800104FF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA58E8BA276C9FD600104FF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA58E8BD276C9FD600104FF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA58E8BF276C9FD600104FF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */,
 				CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */,
-				CA58E8B5276C9FC800104FF1 /* ViewController.swift */,
+				CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */,
 				CA58E8B7276C9FC800104FF1 /* Main.storyboard */,
+				CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */,
 				CA58E8BA276C9FD600104FF1 /* Assets.xcassets */,
 				CA58E8BC276C9FD600104FF1 /* LaunchScreen.storyboard */,
 				CA58E8BF276C9FD600104FF1 /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA58E8B6276C9FC800104FF1 /* ViewController.swift in Sources */,
+				CA58E8B6276C9FC800104FF1 /* LoginViewController.swift in Sources */,
+				CA58E8C8276CADFC00104FF1 /* WelcomeViewController.swift in Sources */,
 				CA58E8B2276C9FC800104FF1 /* AppDelegate.swift in Sources */,
 				CA58E8B4276C9FC800104FF1 /* SceneDelegate.swift in Sources */,
 			);
