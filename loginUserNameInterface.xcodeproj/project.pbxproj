@@ -39,6 +39,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA072027276F4661002DF896 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */,
+				CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA072028276F46E9002DF896 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA58E8B7276C9FC800104FF1 /* Main.storyboard */,
+				CA58E8BC276C9FD600104FF1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		CA58E8A5276C9FC800104FF1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +76,11 @@
 		CA58E8B0276C9FC800104FF1 /* loginUserNameInterface */ = {
 			isa = PBXGroup;
 			children = (
+				CA072027276F4661002DF896 /* ViewControllers */,
+				CA072028276F46E9002DF896 /* Storyboards */,
 				CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */,
 				CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */,
-				CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */,
-				CA58E8B7276C9FC800104FF1 /* Main.storyboard */,
-				CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */,
 				CA58E8BA276C9FD600104FF1 /* Assets.xcassets */,
-				CA58E8BC276C9FD600104FF1 /* LaunchScreen.storyboard */,
 				CA58E8BF276C9FD600104FF1 /* Info.plist */,
 			);
 			path = loginUserNameInterface;
