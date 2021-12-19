@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA072039276F54F6002DF896 /* User1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA072038276F54F6002DF896 /* User1.swift */; };
+		CA07203C276F65B4002DF896 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07203B276F65B4002DF896 /* UserInfoViewController.swift */; };
+		CA07203F276F6610002DF896 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07203E276F6610002DF896 /* MoreInfoViewController.swift */; };
 		CA58E8B2276C9FC800104FF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */; };
 		CA58E8B4276C9FC800104FF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */; };
 		CA58E8B6276C9FC800104FF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA072038276F54F6002DF896 /* User1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User1.swift; sourceTree = "<group>"; };
+		CA07203B276F65B4002DF896 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		CA07203E276F6610002DF896 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		CA58E8AE276C9FC800104FF1 /* loginUserNameInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginUserNameInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 			children = (
 				CA58E8B5276C9FC800104FF1 /* LoginViewController.swift */,
 				CA58E8C7276CADFC00104FF1 /* WelcomeViewController.swift */,
+				CA07203B276F65B4002DF896 /* UserInfoViewController.swift */,
+				CA07203E276F6610002DF896 /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -55,6 +63,31 @@
 				CA58E8BC276C9FD600104FF1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CA072036276F54B8002DF896 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */,
+				CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		CA072037276F54D5002DF896 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA072038276F54F6002DF896 /* User1.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA072041276F9EF6002DF896 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA58E8BA276C9FD600104FF1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CA58E8A5276C9FC800104FF1 = {
@@ -76,11 +109,11 @@
 		CA58E8B0276C9FC800104FF1 /* loginUserNameInterface */ = {
 			isa = PBXGroup;
 			children = (
+				CA072037276F54D5002DF896 /* Models */,
+				CA072036276F54B8002DF896 /* SupportFiles */,
 				CA072027276F4661002DF896 /* ViewControllers */,
 				CA072028276F46E9002DF896 /* Storyboards */,
-				CA58E8B1276C9FC800104FF1 /* AppDelegate.swift */,
-				CA58E8B3276C9FC800104FF1 /* SceneDelegate.swift */,
-				CA58E8BA276C9FD600104FF1 /* Assets.xcassets */,
+				CA072041276F9EF6002DF896 /* Resources */,
 				CA58E8BF276C9FD600104FF1 /* Info.plist */,
 			);
 			path = loginUserNameInterface;
@@ -157,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA58E8B6276C9FC800104FF1 /* LoginViewController.swift in Sources */,
+				CA07203C276F65B4002DF896 /* UserInfoViewController.swift in Sources */,
 				CA58E8C8276CADFC00104FF1 /* WelcomeViewController.swift in Sources */,
+				CA07203F276F6610002DF896 /* MoreInfoViewController.swift in Sources */,
 				CA58E8B2276C9FC800104FF1 /* AppDelegate.swift in Sources */,
+				CA072039276F54F6002DF896 /* User1.swift in Sources */,
 				CA58E8B4276C9FC800104FF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

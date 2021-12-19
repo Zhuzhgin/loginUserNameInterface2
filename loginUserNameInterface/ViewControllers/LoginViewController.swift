@@ -14,19 +14,57 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Private Properties
-    private let userName = "Art"
-    private let password = "000"
+   // private let userName = "Art"
+   // private let password = "000"
+    
+    let user = User.getUserInfo()
+    
     
     // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-            welcomeVC.userName = userNameTF.text!
-        }
         
+        let tabBarController = segue.destination as! UITabBarController
+        
+        guard let viewControllers = tabBarController.viewControllers else {return}
+        
+        //цикл по архиву VC табконтроллера
+        for viewController in viewControllers {
+            
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user[0].userName
+            }
+            
+            
+            /*if let moreInfoVC = viewController as? MoreInfoViewController{
+            
+             }*/
+            // навигатор
+            if let navigationVC = viewController as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                userInfoVC.userAge = user[0].userAge
+                userInfoVC.userMale = user[0].userMale.rawValue
+                userInfoVC.userName = user[0].userName
+                userInfoVC.userHobby = user[0].userHobby.rawValue
+                userInfoVC.title = user[0].userName
+                
+                userInfoVC.userPetType = user[0].userPet.typeOfPet.rawValue
+                userInfoVC.userPetName = user[0].userPet.nameOfPet
+                
+            }
+            
+        }
+        //
+        
+        
+        //guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        //welcomeVC.userName = user[0].userName
+        
+    }
+    
     // MARK: IB Action
     
     @IBAction func loginButtonPressed() {
-        guard userNameTF.text == userName, passwordTF.text == password  else {
+        guard userNameTF.text == user[0].userLogin , passwordTF.text == user[0].password  else {
             passwordTF.text = ""
             viewAlert(title: "Error", message: "Incorrect password or name of user", tag: 0)
             return
@@ -42,8 +80,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwindToLoginVC(_ unwindSegue: UIStoryboardSegue) {
-            userNameTF.text = ""
-            passwordTF.text = ""
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
@@ -56,8 +94,8 @@ extension LoginViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             switch tag {
             case 0: self.passwordTF.text = ""
-            case 1 : self.userNameTF.text = self.userName
-            default : self.passwordTF.text = self.password
+            case 1 : self.userNameTF.text = self.user[0].userLogin
+            default : self.passwordTF.text = self.user[0].password
             }
         }
         alert.addAction(okAction)

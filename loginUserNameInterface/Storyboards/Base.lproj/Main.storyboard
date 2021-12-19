@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-Ii-uKY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYi-Ii-uKY">
                                 <rect key="frame" x="30" y="70" width="260" height="29"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,7 +143,7 @@
         <!--User Info-->
         <scene sceneID="w6S-AB-NZe">
             <objects>
-                <viewController id="1CM-vY-93B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfoViewController" id="1CM-vY-93B" customClass="UserInfoViewController" customModule="loginUserNameInterface" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I2n-AA-Z8i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +164,7 @@
                                         <rect key="frame" x="36.5" y="313" width="207" height="30"/>
                                         <state key="normal" title="Дополнительна информация"/>
                                         <connections>
+                                            <action selector="moreInfoButtonPressed:" destination="1CM-vY-93B" eventType="touchUpInside" id="Eha-Rm-6f2"/>
                                             <segue destination="9Lt-Nh-IED" kind="show" id="AWS-UY-uBS"/>
                                         </connections>
                                     </button>
@@ -179,6 +180,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="User Info" id="it9-tr-Mjq"/>
+                    <connections>
+                        <outlet property="userInfo" destination="KyJ-dA-I4b" id="eeN-lB-ALI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKI-3a-EyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,18 +191,33 @@
         <!--Дополнительная информация-->
         <scene sceneID="yMp-SW-xJu">
             <objects>
-                <viewController id="9Lt-Nh-IED" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="krC-WJ-Byu">
+                <viewController storyboardIdentifier="MoreInfoViewController" id="9Lt-Nh-IED" customClass="MoreInfoViewController" customModule="loginUserNameInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krC-WJ-Byu" customClass="Mor">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-fk-6yg">
+                                <rect key="frame" x="124.5" y="266" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jMC-Vo-CHP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iiV-fk-6yg" firstAttribute="centerX" secondItem="krC-WJ-Byu" secondAttribute="centerX" id="OIf-bs-huc"/>
+                            <constraint firstItem="iiV-fk-6yg" firstAttribute="centerY" secondItem="krC-WJ-Byu" secondAttribute="centerY" id="gDh-Vb-h5c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Дополнительная информация" id="aoZ-iI-Mtu"/>
+                    <connections>
+                        <outlet property="userPetLabel" destination="iiV-fk-6yg" id="U2D-AP-zyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jw-Ja-qbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4702" y="77"/>
+            <point key="canvasLocation" x="4700.625" y="76.056338028169009"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aAn-d9-WwO">
@@ -206,6 +225,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VeS-4S-QH6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wyN-Su-ldg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
