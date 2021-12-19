@@ -23,7 +23,7 @@ struct User {
                 userAge: 43,
                 userMale: .male,
                 userHobby: .climb,
-                userPet: .init(typeOfPet: .dog, nameOfPet: "Keks")
+                userPet: .init(typeOfPet: .dog, nameOfPet: "Кекс")
             )
             
         ]
