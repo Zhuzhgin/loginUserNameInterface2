@@ -34,10 +34,6 @@ class LoginViewController: UIViewController {
                 welcomeVC.userName = user[0].userName
             }
             
-            
-            /*if let moreInfoVC = viewController as? MoreInfoViewController{
-            
-             }*/
             // навигатор
             if let navigationVC = viewController as? UINavigationController {
                 let userInfoVC = navigationVC.topViewController as! UserInfoViewController
@@ -53,11 +49,6 @@ class LoginViewController: UIViewController {
             }
             
         }
-        //
-        
-        
-        //guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        //welcomeVC.userName = user[0].userName
         
     }
     
